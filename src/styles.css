@@ -1,0 +1,90 @@
+html, body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.numberofstones {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: lightgray;
+    background: radial-gradient(lightgray, darkgray);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 5px auto 15px auto;
+}
+
+table { 
+    border-spacing: 0px;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td, th {
+    padding: 10px;
+    border: 1px solid #333;
+    margin: 0;
+    vertical-align: top;
+    text-align: center;
+}
+
+table.light td {
+    border: 1px solid lightgray;
+}
+
+td.field {
+    min-width: 135px;
+    height: 200px;
+}
+
+a, a:active, a:hover {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    text-decoration: none;
+}
+
+a:active, a:hover {
+    background-color: #286194;
+}
+
+.rotate {
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    width: 1.5em;
+    background-color: lightgray;
+}
+
+.rotate div {
+    -moz-transform: rotate(-90.0deg);  /* FF3.5+ */
+    -o-transform: rotate(-90.0deg);  /* Opera 10.5 */
+    -webkit-transform: rotate(-90.0deg);  /* Saf3.1+, Chrome */
+    transform: rotate(-90.0deg);
+    filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);  /* IE6,IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; /* IE8 */
+    margin-left: -10em;
+    margin-right: -10em;
+}
+
+.maximum {
+    background-color: #cdeacd;
+    color: #000;
+}
+
+a.maximum:hover {
+    background-color: #b1ccb1;
+    color: #000;
+}
+
+.index {
+    font-size: 0.7em;
+    color: darkgray;
+    text-align: right;
+}
