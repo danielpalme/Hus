@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Game, Field } from './game/game';
+import { Field, Game } from './game/game';
 
 @Component({
   selector: 'app-root',
@@ -69,5 +69,5 @@ export class AppComponent implements IGameRoot {
 }
 
 export interface IGameRoot {
-  makeMove(field: Field);
+  makeMove(field: Field): void;
 }

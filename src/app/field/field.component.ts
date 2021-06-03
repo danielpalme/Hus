@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Field } from '../game/game';
+import { Component, Input, OnInit } from '@angular/core';
 import { IGameRoot } from '../app.component';
+import { Field } from '../game/game';
 
 @Component({
   selector: 'field',
@@ -31,9 +31,9 @@ import { IGameRoot } from '../app.component';
   styles: []
 })
 export class FieldComponent implements OnInit {
-  @Input() field: Field;
+  @Input() field!: Field;
 
-  @Input() game: IGameRoot;
+  @Input() game!: IGameRoot;
 
   constructor() { }
 

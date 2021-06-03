@@ -111,7 +111,7 @@ export class BorderField extends Field {
 }
 
 export class Board {
-    private _fields: Field[];
+    private _fields: Field[] = [];
     get fields(): Field[] {
         return this._fields;
     }
@@ -209,18 +209,18 @@ export class MoveResult {
 }
 
 export class Game {
-    private _boardPlayer1: Board | null = null;
-    get boardPlayer1(): Board | null {
+    private _boardPlayer1: Board;
+    get boardPlayer1(): Board {
         return this._boardPlayer1;
     }
 
-    private _boardPlayer2: Board | null = null;
-    get boardPlayer2(): Board | null {
+    private _boardPlayer2: Board;
+    get boardPlayer2(): Board {
         return this._boardPlayer2;
     }
 
-    private _currentBoard: Board | null = null;
-    get currentBoard(): Board | null {
+    private _currentBoard: Board;
+    get currentBoard(): Board {
         return this._currentBoard;
     }
 
@@ -241,13 +241,13 @@ export class Game {
         let game = this.clone();
 
         for (let i = 0; i < 16; i++) {
-            game.currentBoard!.fields[i].moveResult = null;
+            game.currentBoard.fields[i].moveResult = null;
         }
 
-        game.currentBoard!.fields[field.index].makeMove();
+        game.currentBoard.fields[field.index].makeMove();
 
         // Toggle players
-        game._currentBoard = this.currentBoard!.player == Player.Player1 ? game.boardPlayer2 : game.boardPlayer1;
+        game._currentBoard = this.currentBoard.player == Player.Player1 ? game.boardPlayer2 : game.boardPlayer1;
 
         Game.applyMoveResultToFieldsOfCurrentBoard(game);
 
@@ -258,21 +258,21 @@ export class Game {
         for (let i = 0; i < 16; i++) {
             let cloneForField = game.clone();
 
-            game.currentBoard!.fields[i].moveResult = cloneForField.currentBoard!.fields[i].makeMove();
+            game.currentBoard.fields[i].moveResult = cloneForField.currentBoard.fields[i].makeMove();
         }
 
-        MoveResult.setTopValues(game.currentBoard!.fields);
+        MoveResult.setTopValues(game.currentBoard.fields);
     }
 
     private clone(): Game {
         let clone = new Game(false);
 
         for (let i = 0; i < 16; i++) {
-            clone._boardPlayer1!.fields[i].numberOfStones = this._boardPlayer1!.fields[i].numberOfStones;
-            clone._boardPlayer2!.fields[i].numberOfStones = this._boardPlayer2!.fields[i].numberOfStones;
+            clone._boardPlayer1.fields[i].numberOfStones = this._boardPlayer1.fields[i].numberOfStones;
+            clone._boardPlayer2.fields[i].numberOfStones = this._boardPlayer2.fields[i].numberOfStones;
         }
 
-        clone._currentBoard = this.currentBoard!.player == Player.Player1 ? clone.boardPlayer1 : clone.boardPlayer2;
+        clone._currentBoard = this.currentBoard.player == Player.Player1 ? clone.boardPlayer1 : clone.boardPlayer2;
 
         return clone;
     }
