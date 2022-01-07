@@ -93,7 +93,7 @@ export class BorderField extends Field {
         this._opponentBorderField = value;
     }
 
-    protected getNumbersOfStonesForNextMove(moveResult: MoveResult) {
+    protected override getNumbersOfStonesForNextMove(moveResult: MoveResult) {
         let numberOfStonesForMove = super.getNumbersOfStonesForNextMove(moveResult);
         
         let numberOfStonesInOpponentBorderField = this.opponentBorderField!.numberOfStones;
