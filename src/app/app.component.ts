@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { Field, Game } from './game/game';
 
 @Component({
-  selector: 'app-root',
-  template: `
+    selector: 'app-root',
+    template: `
     <h1>Hus (Mancala, Kalaha)</h1>
     <table>
       <tr>
@@ -53,7 +53,8 @@ import { Field, Game } from './game/game';
   <br />
   <button (click)="newGame()">New game</button>
   `,
-  styles: []
+    styles: [],
+    standalone: false
 })
 export class AppComponent implements IGameRoot {
   that = this;

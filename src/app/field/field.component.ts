@@ -3,8 +3,8 @@ import { IGameRoot } from '../app.component';
 import { Field } from '../game/game';
 
 @Component({
-  selector: 'field',
-  template: `
+    selector: 'field',
+    template: `
     <div>
       <div class="index" title="Field number">{{ field.index + 1 }}</div>
       <div>
@@ -28,7 +28,8 @@ import { Field } from '../game/game';
       </div>
     </div>
   `,
-  styles: []
+    styles: [],
+    standalone: false
 })
 export class FieldComponent implements OnInit {
   @Input() field!: Field;
