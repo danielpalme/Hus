@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Field, Game } from './game/game';
 
 @Component({
@@ -54,6 +54,7 @@ import { Field, Game } from './game/game';
   <button (click)="newGame()">New game</button>
   `,
     styles: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class AppComponent implements IGameRoot {

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { IGameRoot } from '../app.component';
 import { Field } from '../game/game';
 
@@ -33,6 +33,7 @@ import { Field } from '../game/game';
     </div>
     `,
     styles: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class FieldComponent implements OnInit {
