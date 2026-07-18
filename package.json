@@ -9,24 +9,31 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^22.0.3",
-    "@angular/common": "^22.0.3",
-    "@angular/compiler": "^22.0.3",
-    "@angular/core": "^22.0.3",
-    "@angular/forms": "^22.0.3",
-    "@angular/platform-browser": "^22.0.3",
-    "@angular/platform-browser-dynamic": "^22.0.3",
-    "@angular/router": "^22.0.3",
+    "@angular/animations": "^22.0.7",
+    "@angular/common": "^22.0.7",
+    "@angular/compiler": "^22.0.7",
+    "@angular/core": "^22.0.7",
+    "@angular/forms": "^22.0.7",
+    "@angular/platform-browser": "^22.0.7",
+    "@angular/platform-browser-dynamic": "^22.0.7",
+    "@angular/router": "^22.0.7",
     "rxjs": "~7.8.2",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular/build": "^22.0.4",
-    "@angular/cli": "^22.0.4",
-    "@angular/compiler-cli": "^22.0.3",
+    "@angular/build": "^22.0.7",
+    "@angular/cli": "^22.0.7",
+    "@angular/compiler-cli": "^22.0.7",
     "@types/node": "^26.0.1",
     "baseline-browser-mapping": "^2.10.13",
     "typescript": "~6.0.3"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true,
+    "esbuild@0.27.7": true,
+    "msgpackr-extract@3.0.4": true,
+    "lmdb@3.5.4": true,
+    "@parcel/watcher@2.5.6": true
   }
 }
